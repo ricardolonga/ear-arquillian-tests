@@ -3,7 +3,7 @@
                              http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>mahnke.testing</groupId>
+		<groupId>mahnkong.testing</groupId>
 		<artifactId>ear-arquillian-tests-root</artifactId>
 		<version>1.0</version>
 	</parent>
@@ -19,15 +19,15 @@
 				<version>2.9</version>
 				<configuration>
 					<defaultJavaBundleDir>lib/</defaultJavaBundleDir>
-                    <ejbVersion>3.1</ejbVersion>
+					<ejbVersion>3.1</ejbVersion>
 					<version>5</version>
-                </configuration>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>mahnke.testing</groupId>
+			<groupId>mahnkong.testing</groupId>
 			<artifactId>ear-arquillian-tests-impl</artifactId>
 			<version>1.0</version>
 			<type>ejb</type>
