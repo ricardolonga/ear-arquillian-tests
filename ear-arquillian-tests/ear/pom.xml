@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>mahnke.testing</groupId>
+		<artifactId>ear-arquillian-tests-root</artifactId>
+		<version>1.0</version>
+	</parent>
+	<artifactId>ear-arquillian-tests-ear</artifactId>
+	<packaging>ear</packaging>
+
+	<name>EAR</name>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<defaultJavaBundleDir>lib/</defaultJavaBundleDir>
+                    <ejbVersion>3.1</ejbVersion>
+					<version>5</version>
+                </configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>mahnke.testing</groupId>
+			<artifactId>ear-arquillian-tests-impl</artifactId>
+			<version>1.0</version>
+			<type>ejb</type>
+		</dependency>
+	</dependencies>
+</project>
