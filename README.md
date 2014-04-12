@@ -9,6 +9,7 @@ It took some time to get it working, therefore I decided to post an example proj
 The project was built using the versions below:
 
 maven: 3.1.1
+
 jdk: 1.7.0_51
 
 The application server I used is wildfly 8.0.0.Final - it must be downloaded and extracted in order to be able to run the tests.
@@ -16,6 +17,9 @@ The application server I used is wildfly 8.0.0.Final - it must be downloaded and
 The project is a multi-module maven project with the following modules:
 
 api => the API describing the EJB 
+
 impl => the EJB implementation
+
 ear => the configuration to create an EAR containing the EJB
+
 test => the arquillian tests calling the EJB inside the EAR
