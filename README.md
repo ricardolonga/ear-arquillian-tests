@@ -15,10 +15,10 @@ The application server I used is wildfly 8.0.0.Final - it must be downloaded and
 
 The project is a multi-module maven project with the following modules:
 
-- api => the API describing the EJB 
-- impl => the EJB implementation
-- ear => the configuration to create an EAR containing the EJB
-- test => the arquillian tests calling the EJB inside the EAR
+- api: the API describing the EJB 
+- impl: the EJB implementation
+- ear: the configuration to create an EAR containing the EJB
+- test: the arquillian tests calling the EJB inside the EAR
 
 To build it and run the test, the following steps must be done:
 
