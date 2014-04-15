@@ -2,8 +2,10 @@ ear-arquillian-tests
 ====================
 
 I had to create an Integration Test using the wonderful Arquillian framework, which had to call an EJB inside an existing EAR. It was desired to be able to test:
-Calls to the EJB using a standalone EJB client
-Calls to the EJB from withing another deployment on the same application server
+
+- Calls to the EJB using a standalone EJB client (remote EJB lookup)
+- Calls to the EJB from withing another EAR deployment on the same application server (local EJB lookup)
+
 It took some time to get it working, therefore I decided to post an example project showing how I got it working - hoping it might help some people.
 
 The project was built using the versions below:
@@ -17,8 +19,8 @@ The project is a multi-module maven project with the following modules:
 
 - api: the API describing the EJB 
 - impl: the EJB implementation
-- ear: the configuration to create an EAR containing the EJB
-- test: the arquillian tests calling the EJB inside the EAR
+- ear: the configuration to create an EAR containing the
+- test: the arquillian tests (one for remote, one for local lookup) calling the EJB inside the EAR
 
 To build it and run the test, the following steps must be done:
 
