@@ -15,23 +15,23 @@ import org.junit.runner.RunWith;
 
 @RunWith(Arquillian.class)
 public class GreeterImplInsideEarCalledFromClientTest extends
-		AbstractGreeterImplInsideEarTest {
+        AbstractGreeterImplInsideEarTest {
 
-	@Test
-	@RunAsClient
-	public void testSayHello() {
-		try {
-			final Properties jndiProperties = new Properties();
-			jndiProperties.put(Context.URL_PKG_PREFIXES,
-					"org.jboss.ejb.client.naming");
-			final Context context = new InitialContext(jndiProperties);
-			Greeter greeter = (Greeter) context
-					.lookup("ejb:ear-arquillian-tests-ear-1.0/ear-arquillian-tests-impl-1.0/GreeterImpl!mahnkong.testing.ear_arquillian_tests.api.Greeter");
-			String result = greeter.sayHello("world");
-			Assert.assertEquals("response as expected", "Hello, world!", result);
-		} catch (Exception e) {
-			e.printStackTrace();
-			Assert.fail("Fail");
-		}
-	}
+    @Test
+    @RunAsClient
+    public void testSayHello() {
+        try {
+            final Properties jndiProperties = new Properties();
+            jndiProperties.put(Context.URL_PKG_PREFIXES,
+                    "org.jboss.ejb.client.naming");
+            final Context context = new InitialContext(jndiProperties);
+            Greeter greeter = (Greeter) context
+                    .lookup("ejb:ear-arquillian-tests-ear-1.0/ear-arquillian-tests-impl-1.0/GreeterImpl!mahnkong.testing.ear_arquillian_tests.api.Greeter");
+            String result = greeter.sayHello("world");
+            Assert.assertEquals("response as expected", "Hello, world!", result);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Assert.fail("Fail");
+        }
+    }
 }

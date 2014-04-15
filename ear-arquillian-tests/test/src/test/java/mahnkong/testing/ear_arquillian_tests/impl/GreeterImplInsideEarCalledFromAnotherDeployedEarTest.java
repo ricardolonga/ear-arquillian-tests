@@ -22,7 +22,7 @@ public class GreeterImplInsideEarCalledFromAnotherDeployedEarTest extends Abstra
 	
     @Deployment(testable = false, name="eartest.ear", order=2)
     public static EnterpriseArchive createTestDeployment() {
-        File api = Maven.configureResolver().fromFile(new File("C:/tools/apache-maven-3.1.1/conf/settings.xml")).resolve("mahnkong.testing:ear-arquillian-tests-api:jar:1.0").withoutTransitivity().asSingleFile();
+        File api = Maven.configureResolver().fromFile(new File("settings.xml")).resolve("mahnkong.testing:ear-arquillian-tests-api:jar:1.0").withoutTransitivity().asSingleFile();
 
         JavaArchive jar = ShrinkWrap.create(JavaArchive.class, "eartest.jar")
                 .addClasses(GreeterWrapper.class, GreeterWrapperImpl.class)
