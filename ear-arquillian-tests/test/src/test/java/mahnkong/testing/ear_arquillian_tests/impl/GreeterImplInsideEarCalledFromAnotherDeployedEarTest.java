@@ -54,7 +54,7 @@ public class GreeterImplInsideEarCalledFromAnotherDeployedEarTest extends
 	@Test
 	@RunAsClient
 	public void testSayHello() {
-		// create the lamda
+		// create the lambda
 		DetachedTestMethod<String> testMethod = (greeter) -> {
 			// invoke method on the EJB we want to test
 			return greeter.sayHello("world");
