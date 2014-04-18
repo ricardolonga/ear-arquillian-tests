@@ -1,9 +1,9 @@
 ear-arquillian-tests
 ====================
 
-This is and example project showing how to test method invocation on an EJB inside an EAR from another EAR (deployed on the same application server) using the Java 8 Lamda feature and Arquillian.
+This is and example project showing how to test method invocation on an EJB inside an EAR from another EAR (deployed on the same application server) using the Java 8 Lambda feature and Arquillian.
 
-### Why Lamdas? ###
+### Why Lambdas? ###
 
 I had to create an Integration Test using the wonderful Arquillian framework, which had to call an EJB inside an existing EAR. It was desired to be able to test:
 
@@ -17,7 +17,7 @@ This approach had some disadvantages:
 1. The test code is not inside the test case, but inside the Wrapper EJB
 2. I is neccessary to create a wrapper method for each method of the EJB I had to test.
 
-The Lamda feature introduced with Java 8 comes here to the rescue. Using Lamdas it is possible to have the Target EJB method invocation coded inside the test case and passed to the Test EAR, which will do the actual invocation using the target EJB object. The Test EAR EJB therefore only needs to have 2 methods, independant how much methods the EJB I have to test has. One to register the lamda and one to execute the lamda method.
+The Lambda feature introduced with Java 8 comes here to the rescue. Using Lambdas it is possible to have the Target EJB method invocation coded inside the test case and passed to the Test EAR, which will do the actual invocation using the target EJB object. The Test EAR EJB therefore only needs to have 2 methods, independant how much methods the EJB I have to test has. One to register the lambda and one to execute the lambda method.
 
 ### Used technologies and Frameworks ###
 
