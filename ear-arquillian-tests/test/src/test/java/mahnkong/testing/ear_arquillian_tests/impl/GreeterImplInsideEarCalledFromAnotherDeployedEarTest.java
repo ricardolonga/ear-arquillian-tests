@@ -59,7 +59,7 @@ public class GreeterImplInsideEarCalledFromAnotherDeployedEarTest extends
 			// invoke method on the EJB we want to test
 			return greeter.sayHello("world");
 		};
-		// register lamda in wrapper bean
+		// register lambda in wrapper bean
 		greeterWrapper.registerDetachedTestMethod(testMethod);
 		// invoke
 		String result = (String) greeterWrapper.executeTest();
