@@ -3,7 +3,7 @@ ear-arquillian-tests
 
 This is and example project showing how to test method invocation on an EJB inside an EAR from another EAR (deployed on the same application server) using the Java 8 Lamda feature and Arquillian
 
-## Why Lamdas? ##
+### Why Lamdas? ###
 
 I had to create an Integration Test using the wonderful Arquillian framework, which had to call an EJB inside an existing EAR. It was desired to be able to test:
 
@@ -18,7 +18,7 @@ This approach had some disadvantages:
 
 The Lamda feature introduced with Java 8 comes here to the rescue. Using Lamdas it is possible to have the Target EJB method invocation coded inside the test case and passed to the Test EAR, which will do the actual invocation using the target EJB object. The Test EAR EJB therefore only needs to have 2 methods, independant how much methods the EJB I have to test has. One to register the lamda and one to execute the lamda method.
 
-## Used technologies and Frameworks ##
+### Used technologies and Frameworks ###
 
 The project was built using the versions below:
 - maven: 3.1.1
