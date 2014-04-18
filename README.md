@@ -13,6 +13,7 @@ I had to create an Integration Test using the wonderful Arquillian framework, wh
 The first required test is easy to implement using standard EJB invocation mechanisms. I implemented the second test by creating a test EAR using arquillian, which gets deployed together with the target ear onto an application server. I had to create a Wrapper EJB, which contained methods for each test invocation on the target bean and returned the result to the client. 
 
 This approach had some disadvantages:
+
 1. The test code is not inside the test case, but inside the Wrapper EJB
 2. I is neccessary to create a wrapper method for each method of the EJB I had to test.
 
