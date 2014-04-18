@@ -1,7 +1,7 @@
 ear-arquillian-tests
 ====================
 
-This is and example project showing how to test method invocation on an EJB inside an EAR from another EAR (deployed on the same application server) using the Java 8 Lamda feature and Arquillian
+This is and example project showing how to test method invocation on an EJB inside an EAR from another EAR (deployed on the same application server) using the Java 8 Lamda feature and Arquillian.
 
 ### Why Lamdas? ###
 
