@@ -12,8 +12,8 @@ import mahnkong.testing.ear_arquillian_tests.api.GreeterWrapper;
 @Stateful
 @Remote(GreeterWrapper.class)
 public class GreeterWrapperImpl implements GreeterWrapper {
-	//local lookup
-	@EJB(mappedName="java:global/ear-arquillian-tests-ear-1.0/ear-arquillian-tests-impl-1.0/GreeterImpl!mahnkong.testing.ear_arquillian_tests.api.Greeter")
+	// local lookup
+	@EJB(mappedName = "java:global/ear-arquillian-tests-ear-1.0/ear-arquillian-tests-impl-1.0/GreeterImpl!mahnkong.testing.ear_arquillian_tests.api.Greeter")
 	private Greeter greeter;
 	private DetachedTestMethod<?> detachedTestable;
 
@@ -23,7 +23,8 @@ public class GreeterWrapperImpl implements GreeterWrapper {
 	}
 
 	@Override
-	public void registerDetachedTestMethod(DetachedTestMethod<? extends Object> detachedTestable) {
+	public void registerDetachedTestMethod(
+			DetachedTestMethod<? extends Object> detachedTestable) {
 		this.detachedTestable = detachedTestable;
 	}
 }
