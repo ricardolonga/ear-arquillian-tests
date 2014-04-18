@@ -36,5 +36,5 @@ The project is a multi-module maven project with the following modules:
 - test => the arquillian tests calling the EJB inside the EAR
 
 To build it and run the test, the following steps must be done:
-change the _arquillian.xml_ to point to the extracted wildfly you just downloaded
-execute _mvn -Dmaven.settingsFile='path to your maven settings-xml' install_ from the project root or run the test cases using Eclipse (you have to set the maven.settingsFile property in Eclipse using "Run configurations..")
+- change the _arquillian.xml_ to point to the extracted wildfly you just downloaded
+- execute _mvn -Dmaven.settingsFile='path to your maven settings-xml' install_ from the project root or run the test cases using Eclipse (you have to set the maven.settingsFile property in Eclipse using "Run configurations..")
