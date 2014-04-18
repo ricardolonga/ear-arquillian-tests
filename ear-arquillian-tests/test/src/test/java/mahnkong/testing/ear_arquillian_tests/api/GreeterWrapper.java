@@ -1,8 +1,8 @@
 package mahnkong.testing.ear_arquillian_tests.api;
 
-import java.util.List;
 
+//The bean wrapper interface
 public interface GreeterWrapper {
-	public String sayHelloFromGreeter(String name);
-	public int invoke(List<String> list);
+	public Object executeTest();
+	public void registerDetachedTestMethod(DetachedTestMethod<? extends Object> detachedTestable);
 }
